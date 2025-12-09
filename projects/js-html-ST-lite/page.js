@@ -59,11 +59,9 @@ function onDelete() {
 
 // View
 function updateTable(newRows) {
-  console.log(newRows);
   const htmlTable = document.getElementById("table");
   htmlTable.innerHTML = '';
   for (const row of newRows) {
-    console.log(row);
     const htmlRow = document.createElement('tr');
     for (const key of Object.keys(row)) {
       const htmlTableItem = document.createElement('td');
@@ -72,6 +70,5 @@ function updateTable(newRows) {
     }
     htmlTable.appendChild(htmlRow);
   }
-  console.log(htmlTable);
 }
 
