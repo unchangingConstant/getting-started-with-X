@@ -1,0 +1,39 @@
+body {
+    display: block; 
+    width: 100%;
+}
+
+body > * {
+    margin: 5px
+}
+
+h1 {
+    text-align: center;
+}
+
+#student-form {
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#student-form > * {
+    margin-inline: 5px;
+}
+
+#controls {
+    display: flex; 
+    justify-content: center;
+}
+
+#controls > * {
+    margin-inline: 5px;
+}
+
+#table {
+    width: 50%;
+}
+
+td, th, tr {
+    border: 1px solid;
+}
