@@ -1,14 +1,37 @@
 import { useState } from 'react'
 import './App.css'
+import Table from './components/Table'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const initRows = [
+    'Somebody',
+    'Once told me',
+    'The world'
+  ]
+
+  const [rows, setRows] = useState(initRows);
+  const [input, setInput] = useState('');
+
+  const addEntry = (newEntry) => {
+    setRows([...rows, newEntry]);
+  }
 
   return (
     <>
-      <button onClick={() => setCount((count) => count + 1)}>
-        count is {count}
-      </button>
+      <h1>Table</h1>
+        <div>
+          <input 
+            value={input} 
+            onChange={(change) => setInput(change.target.value)} 
+            id="entryInput"/>
+        </div>
+        <div id="controls">
+          <button onClick={() => addEntry(input)} id="addButton">
+            Add Entry
+          </button>
+        </div>
+      <Table rows={rows}/>
     </>
   )
 }
